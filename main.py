@@ -95,6 +95,6 @@ if prompt := st.chat_input("Enter a Movie Title"):
   st.session_state.messages.append(
     {
       "role": "assistant",
-      "content": f"Echo: {responses}"
+      "content": f"BERT: {responses}"
     }
   )
