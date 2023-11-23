@@ -1,16 +1,10 @@
 import streamlit as st
 import pandas as pd
-import DataPreperation as dp
 from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI
 
-df = pd.read_csv('CSV/filter_imdb.csv')
+df = pd.read_csv('CSV/filter_imdb_bow.csv')
 df.drop(columns = df.columns[0], axis=1, inplace = True)
-df = df.astype(str)
-df['combined_value'] = df.apply(dp.combine_features,axis=1)
-df['index'] = [i for i in range(0,len(df))]
-
-df.head()
 
 sentence_embeddings = pd.read_csv('CSV/bert.csv')
 df.drop(columns = df.columns[0], axis=1, inplace = True)

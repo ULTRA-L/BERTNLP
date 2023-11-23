@@ -44,6 +44,8 @@ df = df.astype(str)
 df['combined_value'] = df.apply(combine_features,axis=1)
 df['index'] = [i for i in range(0,len(df))]
 
+df.to_csv("CSV/filter_imdb_bow.csv")
+
 bert = SentenceTransformer('bert-base-nli-mean-tokens')
 sentence_embeddings = bert.encode(df['combined_value'].tolist())
 
