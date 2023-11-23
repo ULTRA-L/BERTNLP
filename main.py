@@ -7,7 +7,7 @@ df = pd.read_csv('CSV/filter_imdb_bow.csv')
 df.drop(columns = df.columns[0], axis=1, inplace = True)
 
 sentence_embeddings = pd.read_csv('CSV/bert.csv')
-df.drop(columns = df.columns[0], axis=1, inplace = True)
+sentence_embeddings.drop(columns = sentence_embeddings.columns[0], axis=1, inplace = True)
 
 similarity = cosine_similarity(sentence_embeddings)
 indices = pd.Series(df['Title'])
