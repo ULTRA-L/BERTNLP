@@ -49,3 +49,5 @@ sentence_embeddings = bert.encode(df['combined_value'].tolist())
 
 df_bert = pd.DataFrame(sentence_embeddings)
 df_bert.to_csv("CSV/bert.csv")
+
+print("bert.csv was saved")
