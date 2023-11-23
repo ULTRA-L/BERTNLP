@@ -88,13 +88,13 @@ if prompt := st.chat_input("Enter a Movie Title"):
   responses = reply(prompt)
 
   with st.chat_message("assistant"):
-    for response in responses:
-      st.markdown(f"BERT: {response}")
+    #for response in responses:
+    st.markdown(f"BERT: {responses}")
 
-  for response in responses:
-    st.session_state.messages.append(
-      {
-        "role": "assistant",
-        "content": f"Echo: {response}"
-      }
-    )
+  #for response in responses:
+  st.session_state.messages.append(
+    {
+      "role": "assistant",
+      "content": f"Echo: {responses}"
+    }
+  )
