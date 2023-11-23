@@ -28,7 +28,7 @@ def recommend(title, cosine_sim = similarity):
   return recommended_movies
 
 client = OpenAI(
-    api_key = st.secrets["BERT_OPEN_AI_KEY"]
+    api_key = st.secrets["bert_openai_key"]
 )
 
 def reply(query):
